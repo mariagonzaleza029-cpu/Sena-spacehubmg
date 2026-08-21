@@ -1,0 +1,128 @@
+.header {
+  width: 100%;
+  min-height: 110px;
+  background-color: #030817;
+  border-bottom: #1e293b;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.brand-name {
+  background-color: #f163c7;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 9px;
+}
+
+.brand-description {
+  color: #aeb8cc;
+
+  font-family: monospace;
+
+  font-size: 13px;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-login,
+.btn-register {
+  padding: 7px 13px;
+
+  border-radius: 12px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.btn-login {
+  background-color: #eb92d0;
+
+  color: white;
+
+  border: none;
+}
+
+.btn-register {
+  background-color: #172033;
+
+  color: #00a8ff;
+
+  border: 1px solid #24557a;
+}
+
+.user-container {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  width: fit-content;
+
+  background-color: #0d1528;
+
+  border: 1px solid #db73b8;
+
+  border-radius: 12px;
+
+  padding: 7px 12px;
+}
+
+.status {
+  width: 8px;
+  height: 8px;
+
+  background-color: #f46ef8;
+
+  border-radius: 50%;
+}
+
+.user-name {
+  color: white;
+
+  font-weight: bold;
+
+  font-size: 13px;
+}
+
+.user-role {
+  background-color: #123c27;
+
+  color: #f825e7;
+
+  padding: 4px 8px;
+
+  border-radius: 4px;
+
+  font-size: 11px;
+}
+
+.btn-logout {
+  background: none;
+
+  border: none;
+
+  color: #ff4d73;
+
+  text-decoration: underline;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}

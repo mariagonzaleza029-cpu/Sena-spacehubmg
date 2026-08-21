@@ -1,0 +1,15 @@
+.dashboard {
+  min-height: calc(100vh - 150px);
+
+  padding: 30px;
+
+  color: white;
+}
+
+.dashboard h1 {
+  margin-bottom: 10px;
+}
+
+.dashboard p {
+  color: #aeb8cc;
+}
