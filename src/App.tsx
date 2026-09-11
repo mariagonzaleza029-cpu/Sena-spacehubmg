@@ -4,22 +4,27 @@ import DashboardPage from './pages/DashboardPage/DashboardPage';
 
 function App() {
   return (
-    <Routes>
+<Routes>
+      {/* 1. Ruta Pública (Accesible para cualquiera) */}
+      <Route path="/login" element={<LoginPage />} />
 
-      <Route path="/" element={<MainLayout />}>
-        
-        <Route
-          index
-          element={<Navigate to="/dashboard" replace />}
-        />
+      {/* 2. Nivel 1 de Protección: Requiere cualquier usuario autenticado (Aprendiz, Instructor, Admin) */}
+      <Route element={<ProtectedRoute />}>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Navigate to="/dashboard" replace />} />
+          <Route path="dashboard" element={<DashboardPage />} />
+          <Route path="inventario" element={<EquiposPage />} />
 
-        <Route
-          path="dashboard"
-          element={<DashboardPage />}
-        />
-
+          {/* 3. Nivel 2 de Protección (RBAC): Exclusivo para el rol 'Administrador' */}
+          <Route element={<ProtectedRoute requiredRole="Administrador" />}>
+            <Route path="inventario/nuevo" element={<NuevoEquipoPage />} />
+            <Route path="inventario/:placaSena" element={<DetalleEquipoPage />} />
+          </Route>
+        </Route>
       </Route>
 
+      {/* Ruta Comodín: Redirige cualquier ruta desconocida al login */}
+      <Route path="*" element={<Navigate to="/login" replace />} />
     </Routes>
   );
 }
