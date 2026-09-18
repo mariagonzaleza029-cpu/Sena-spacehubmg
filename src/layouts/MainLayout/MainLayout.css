@@ -1,0 +1,96 @@
+
+.layout-shell {
+  min-height: 100vh;
+  background: #0f172a;
+  color: #f1f5f9;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Barra de sesión ---------- */
+
+.session-bar {
+  background: rgba(30, 41, 59, 0.8);
+  border-bottom: 1px solid rgba(51, 65, 85, 0.6);
+  padding: 10px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 12px;
+  font-family: monospace;
+
+  box-shadow: inset 0 -1px 0 rgba(15, 23, 42, 0.3);
+}
+
+.session-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.session-status {
+  width: 8px;
+  height: 8px;
+
+  display: inline-block;
+
+  background: #39d98a;
+  border-radius: 50%;
+
+  box-shadow: 0 0 8px rgba(57, 217, 138, 0.55);
+}
+
+.session-label {
+  color: #94a3b8;
+}
+
+.session-user {
+  color: #ffffff;
+}
+
+.session-role {
+  padding: 2px 8px;
+
+  background: rgba(57, 217, 138, 0.12);
+  color: #39d98a;
+
+  border: 1px solid rgba(57, 217, 138, 0.25);
+  border-radius: 5px;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* ---------- Botón cerrar sesión ---------- */
+
+.logout-button {
+  padding: 5px 12px;
+
+  background: rgba(136, 19, 55, 0.6);
+  color: #fecdd3;
+
+  border: 1px solid rgba(244, 63, 94, 0.5);
+  border-radius: 8px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.logout-button:hover {
+  background: #be123c;
+  color: #ffffff;
+}
+
+/* ---------- Contenido ---------- */
+
+.content-viewport {
+  flex: 1;
+  padding: 24px;
+}

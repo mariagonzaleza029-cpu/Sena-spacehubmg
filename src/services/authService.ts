@@ -4,7 +4,7 @@
 //Encapsula las peticiones HTTP al API de autenticación.
 // =================================================================
 import { apiFetch } from './api';
-import { User } from '../Context/AuthContext';
+import type { User } from '../Context/AuthContext';
 
 export interface LoginCredentials {
   email: string;

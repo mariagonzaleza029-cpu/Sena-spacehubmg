@@ -1,6 +1,13 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout/MainLayout';
 import DashboardPage from './pages/DashboardPage/DashboardPage';
+import LoginPage from './pages/LoginPage/LoginPage';
+import { ProtectedRoute } from './Routes/ProtectedRoute';
+import EquiposPage from './pages/EquiposPage/EquiposPage';
+import NuevoEquipoPage from './pages/NuevoEquipoPage/NuevoEquipoPage';
+import DetalleEquipoPage from './pages/DetalleEquipoPage/DetalleEquipoPage';
+
+
 
 function App() {
   return (

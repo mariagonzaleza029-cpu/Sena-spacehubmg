@@ -1,0 +1,56 @@
+
+.nav-menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: #0f172a;
+  border-bottom: 1px solid #334155;
+}
+
+/* ---------- Enlaces ---------- */
+
+.nav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 15px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  color: #94a3b8;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.nav-pill:hover {
+  color: #f8fafc;
+  background: #1e293b;
+  border-color: #334155;
+}
+
+/* ---------- Enlace activo ---------- */
+
+.nav-pill.active {
+  color: #39d98a;
+  background: rgba(57, 217, 138, 0.1);
+  border-color: rgba(57, 217, 138, 0.25);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 700px) {
+  .nav-menu {
+    padding: 10px 16px;
+    overflow-x: auto;
+  }
+
+  .nav-pill {
+    flex-shrink: 0;
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}

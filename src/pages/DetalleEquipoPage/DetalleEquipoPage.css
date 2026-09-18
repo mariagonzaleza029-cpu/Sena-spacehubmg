@@ -1,0 +1,193 @@
+
+.detalle-equipo-page {
+  width: 100%;
+  padding: 28px;
+  color: #f8fafc;
+}
+
+/* ---------- Tarjeta ---------- */
+
+.detalle-equipo-card {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------- Encabezado ---------- */
+
+.detalle-equipo-header {
+  margin-bottom: 25px;
+}
+
+.detalle-equipo-header h2 {
+  margin: 0 0 8px;
+  color: #38bdf8;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.detalle-equipo-header p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.placa-detalle {
+  color: #f8fafc;
+  font-weight: 700;
+}
+
+/* ---------- Error ---------- */
+
+.detalle-equipo-error {
+  margin-bottom: 20px;
+  padding: 13px 15px;
+  border: 1px solid #f43f5e;
+  border-radius: 10px;
+  background: rgba(127, 29, 29, 0.45);
+  color: #fecdd3;
+  font-size: 13px;
+}
+
+/* ---------- Formulario ---------- */
+
+.detalle-equipo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.detalle-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.detalle-form-group label {
+  color: #cbd5e1;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.detalle-form-group input,
+.detalle-form-group select {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid #475569;
+  border-radius: 9px;
+  outline: none;
+  background: #0f172a;
+  color: #f8fafc;
+  font-size: 13px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.detalle-form-group input:focus,
+.detalle-form-group select:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1);
+}
+
+/* ---------- Información bloqueada ---------- */
+
+.info-equipo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 13px 15px;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  background: #0f172a;
+}
+
+.info-equipo span:first-child {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.info-equipo span:last-child {
+  color: #f8fafc;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ---------- Botones ---------- */
+
+.detalle-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+  padding-top: 20px;
+  border-top: 1px solid #334155;
+}
+
+.btn-volver,
+.btn-actualizar {
+  padding: 10px 17px;
+  border: none;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-volver {
+  background: #334155;
+  color: #cbd5e1;
+}
+
+.btn-volver:hover {
+  background: #475569;
+}
+
+.btn-actualizar {
+  background: #0284c7;
+  color: white;
+}
+
+.btn-actualizar:hover {
+  background: #0369a1;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(2, 132, 199, 0.2);
+}
+
+/* ---------- Cargando ---------- */
+
+.detalle-loading {
+  padding: 50px 20px;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 650px) {
+  .detalle-equipo-page {
+    padding: 18px;
+  }
+
+  .detalle-equipo-card {
+    padding: 22px;
+  }
+
+  .detalle-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .btn-volver,
+  .btn-actualizar {
+    width: 100%;
+    text-align: center;
+  }
+}
+

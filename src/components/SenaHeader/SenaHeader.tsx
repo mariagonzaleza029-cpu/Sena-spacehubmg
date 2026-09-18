@@ -1,15 +1,17 @@
+
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../Context/AuthContext';
 import './SenaHeader.css';
 
-interface Usuario {
-  nombre: string;
-  rol: string;
-}
+function Header() {
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
 
-interface HeaderProps {
-  usuario?: Usuario;
-}
+  const handleLogout = async () => {
+    await logout();
+    navigate('/login');
+  };
 
-function Header({ usuario }: HeaderProps) {
   return (
     <header className="header">
 
@@ -18,35 +20,29 @@ function Header({ usuario }: HeaderProps) {
           SENA SpaceHub
         </span>
 
+        <span className="brand-description">
+          Gestión de recursos tecnológicos
+        </span>
       </div>
 
-      {usuario ? (
+      {user && (
         <div className="user-container">
 
           <span className="status"></span>
 
           <span className="user-name">
-            {usuario.nombre}
+            {user.nombreCompleto}
           </span>
 
           <span className="user-role">
-            {usuario.rol}
+            {user.role}
           </span>
 
-          <button className="btn-logout">
+          <button
+            className="btn-logout"
+            onClick={handleLogout}
+          >
             Salir
-          </button>
-
-        </div>
-      ) : (
-        <div className="auth-buttons">
-
-          <button className="btn-login">
-             Iniciar Sesión
-          </button>
-
-          <button className="btn-register">
-             Registrarse
           </button>
 
         </div>
@@ -57,4 +53,3 @@ function Header({ usuario }: HeaderProps) {
 }
 
 export default Header;
-

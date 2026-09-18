@@ -1,128 +1,173 @@
+
 .header {
   width: 100%;
-  min-height: 110px;
-  background-color: #030817;
-  border-bottom: #1e293b;
-  padding: 20px;
+  min-height: 92px;
+  padding: 18px 28px;
   box-sizing: border-box;
+
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   gap: 20px;
+
+  background: #030817;
+  border-bottom: 1px solid #1e293b;
 }
 
+/* MARCA */
 
 .header-brand {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 14px;
 }
 
 .brand-name {
-  background-color: #f163c7;
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 6px 10px;
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 12px;
   border-radius: 9px;
+
+  background: #39d98a;
+  color: #07140d;
+
+  font-size: 14px;
+  font-weight: 800;
 }
 
 .brand-description {
-  color: #aeb8cc;
-
+  color: #94a3b8;
   font-family: monospace;
-
   font-size: 13px;
 }
 
+/* BOTONES */
+
 .auth-buttons {
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 
 .btn-login,
 .btn-register {
-  padding: 7px 13px;
+  padding: 8px 14px;
+  border-radius: 9px;
 
-  border-radius: 12px;
-
-  font-weight: bold;
-
+  font-size: 12px;
+  font-weight: 700;
   cursor: pointer;
+
+  transition: all 0.2s ease;
 }
 
 .btn-login {
-  background-color: #eb92d0;
+  background: #39d98a;
+  color: #07140d;
+  border: 1px solid #39d98a;
+}
 
-  color: white;
-
-  border: none;
+.btn-login:hover {
+  background: #2fc477;
 }
 
 .btn-register {
-  background-color: #172033;
-
-  color: #00a8ff;
-
-  border: 1px solid #24557a;
+  background: #172033;
+  color: #38bdf8;
+  border: 1px solid #334155;
 }
+
+.btn-register:hover {
+  background: #1e293b;
+  border-color: #38bdf8;
+}
+
+/* USUARIO */
 
 .user-container {
   display: flex;
   align-items: center;
-
-  gap: 8px;
+  gap: 9px;
 
   width: fit-content;
-
-  background-color: #0d1528;
-
-  border: 1px solid #db73b8;
-
-  border-radius: 12px;
-
   padding: 7px 12px;
+
+  background: #0d1528;
+  border: 1px solid #334155;
+  border-radius: 10px;
 }
 
 .status {
   width: 8px;
   height: 8px;
 
-  background-color: #f46ef8;
-
+  background: #39d98a;
   border-radius: 50%;
+
+  box-shadow: 0 0 8px rgba(57, 217, 138, 0.55);
 }
 
 .user-name {
-  color: white;
-
-  font-weight: bold;
-
+  color: #f8fafc;
   font-size: 13px;
+  font-weight: 700;
 }
 
 .user-role {
-  background-color: #123c27;
-
-  color: #f825e7;
-
   padding: 4px 8px;
 
-  border-radius: 4px;
+  background: rgba(57, 217, 138, 0.12);
+  color: #39d98a;
 
-  font-size: 11px;
+  border: 1px solid rgba(57, 217, 138, 0.2);
+  border-radius: 5px;
+
+  font-size: 10px;
+  font-weight: 700;
 }
 
 .btn-logout {
-  background: none;
+  margin-left: 4px;
 
+  background: none;
   border: none;
 
-  color: #ff4d73;
+  color: #fb7185;
 
-  text-decoration: underline;
-
-  font-weight: bold;
+  font-size: 11px;
+  font-weight: 700;
 
   cursor: pointer;
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.btn-logout:hover {
+  color: #f43f5e;
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+  .header {
+    min-height: auto;
+    padding: 16px;
+
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .header-brand {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .auth-buttons,
+  .user-container {
+    justify-content: center;
+    width: 100%;
+  }
 }

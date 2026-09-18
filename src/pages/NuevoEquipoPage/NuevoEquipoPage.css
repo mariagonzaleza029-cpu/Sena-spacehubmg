@@ -1,0 +1,129 @@
+
+.nuevo-equipo-page {
+  width: 100%;
+  padding: 28px;
+  color: #f8fafc;
+}
+
+/* ---------- Tarjeta ---------- */
+
+.nuevo-equipo-card {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------- Encabezado ---------- */
+
+.nuevo-equipo-header {
+  margin-bottom: 25px;
+}
+
+.nuevo-equipo-header h2 {
+  margin: 0 0 6px;
+  color: #39d98a;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.nuevo-equipo-header p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+/* ---------- Error ---------- */
+
+.nuevo-equipo-error {
+  margin-bottom: 20px;
+  padding: 13px 15px;
+  border: 1px solid #f43f5e;
+  border-radius: 10px;
+  background: rgba(127, 29, 29, 0.45);
+  color: #fecdd3;
+  font-size: 13px;
+}
+
+/* ---------- Formulario ---------- */
+
+.nuevo-equipo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-group label {
+  color: #cbd5e1;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid #475569;
+  border-radius: 9px;
+  outline: none;
+  background: #0f172a;
+  color: #f8fafc;
+  font-size: 13px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: #64748b;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #39d98a;
+  box-shadow: 0 0 0 3px rgba(57, 217, 138, 0.1);
+}
+
+/* ---------- Dos columnas ---------- */
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* ---------- Botones ---------- */
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+  padding-top: 20px;
+  border-top: 1px solid #334155;
+}
+
+.btn-cancelar,
+.btn-guardar {
+  padding: 10px 17px;
+  border: none;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-cancelar {
+  background: #334155;
+  color: #cbd5e1;
+}
