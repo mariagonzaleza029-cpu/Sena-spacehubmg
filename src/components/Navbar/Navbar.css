@@ -35,7 +35,7 @@
 /* ---------- Enlace activo ---------- */
 
 .nav-pill.active {
-  color: #39d98a;
+  color: #7f1df0;
   background: rgba(57, 217, 138, 0.1);
   border-color: rgba(57, 217, 138, 0.25);
 }

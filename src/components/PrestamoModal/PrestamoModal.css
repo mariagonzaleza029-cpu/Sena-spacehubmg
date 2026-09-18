@@ -1,0 +1,198 @@
+.prestamo-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+  box-sizing: border-box;
+
+  background: rgba(3, 8, 23, 0.78);
+  backdrop-filter: blur(4px);
+}
+
+.prestamo-modal {
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+
+  padding: 28px;
+  box-sizing: border-box;
+
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 16px;
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* CABECERA */
+
+.prestamo-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 22px;
+  padding-bottom: 17px;
+
+  border-bottom: 1px solid #334155;
+}
+
+.prestamo-modal-header h3 {
+  margin: 0;
+  color: #880ffa;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.btn-cerrar-modal {
+  width: 32px;
+  height: 32px;
+
+  border: 1px solid #334155;
+  border-radius: 8px;
+
+  background: #0f172a;
+  color: #94a3b8;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-cerrar-modal:hover {
+  background: #334155;
+  color: #f8fafc;
+}
+
+/* FORMULARIO */
+
+.prestamo-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.prestamo-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.prestamo-form-group label {
+  color: #cbd5e1;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.prestamo-form-group input,
+.prestamo-form-group select {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 11px 13px;
+
+  border: 1px solid #475569;
+  border-radius: 9px;
+  outline: none;
+
+  background: #0f172a;
+  color: #f8fafc;
+
+  font-size: 13px;
+
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.prestamo-form-group input:focus,
+.prestamo-form-group select:focus {
+  border-color: #8623f8;
+  box-shadow: 0 0 0 3px rgba(57, 217, 138, 0.1);
+}
+
+.prestamo-form-group input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.prestamo-form-group select option {
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+/* ACCIONES */
+
+.prestamo-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  margin-top: 7px;
+  padding-top: 19px;
+
+  border-top: 1px solid #334155;
+}
+
+.btn-cancelar-prestamo,
+.btn-guardar-prestamo {
+  padding: 10px 16px;
+
+  border-radius: 9px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-cancelar-prestamo {
+  border: 1px solid #475569;
+  background: #334155;
+  color: #cbd5e1;
+}
+
+.btn-cancelar-prestamo:hover {
+  background: #475569;
+}
+
+.btn-guardar-prestamo {
+  border: 1px solid #a851fa;
+  background: #ba4aee;
+  color: #07140d;
+}
+
+.btn-guardar-prestamo:hover {
+  background: #cf41fa;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(57, 217, 138, 0.18);
+}
+
+.btn-guardar-prestamo:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 550px) {
+  .prestamo-modal {
+    padding: 22px;
+  }
+
+  .prestamo-modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .btn-cancelar-prestamo,
+  .btn-guardar-prestamo {
+    width: 100%;
+  }
+}

@@ -6,7 +6,7 @@ import { ProtectedRoute } from './Routes/ProtectedRoute';
 import EquiposPage from './pages/EquiposPage/EquiposPage';
 import NuevoEquipoPage from './pages/NuevoEquipoPage/NuevoEquipoPage';
 import DetalleEquipoPage from './pages/DetalleEquipoPage/DetalleEquipoPage';
-
+import PrestamosPage from './pages/PrestamosPage/PrestamosPage';
 
 
 function App() {
@@ -22,6 +22,7 @@ function App() {
           <Route path="dashboard" element={<DashboardPage />} />
           <Route path="inventario" element={<EquiposPage />} />
 
+          <Route path="prestamos" element={<PrestamosPage />} />
           {/* 3. Nivel 2 de Protección (RBAC): Exclusivo para el rol 'Administrador' */}
           <Route element={<ProtectedRoute requiredRole="Administrador" />}>
             <Route path="inventario/nuevo" element={<NuevoEquipoPage />} />

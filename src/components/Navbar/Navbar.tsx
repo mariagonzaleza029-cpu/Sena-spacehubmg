@@ -32,6 +32,15 @@ export default function NavBar() {
         Inventario Equipos
       </Link>
 
+      <Link
+        to="/prestamos"
+        className={`nav-pill ${
+          location.pathname.startsWith('/prestamos') ? 'active' : ''
+        }`}
+      >
+        Prestamos
+      </Link>
+
     </header>
   );
 }
