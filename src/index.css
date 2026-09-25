@@ -1,4 +1,90 @@
-*{
+* {
   margin: 0;
-  font-family: 'franklin Gothic Medium', 'Arial narrow', Arial, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+:root {
+  /* ===== PALETA SPACEHUB ===== */
+  --color-fondo: #120d1c;
+  --color-fondo-secundario: #1a1326;
+  --color-panel: #21182f;
+
+  --color-lila: #a78bfa;
+  --color-lila-claro: #c4b5fd;
+  --color-rosa: #f472b6;
+  --color-fucsia: #e879f9;
+
+  --color-texto: #f8f7ff;
+  --color-texto-secundario: #aaa0bd;
+
+  --color-borde: #392c50;
+
+  --color-exito: #c4b5fd;
+  --color-alerta: #f472b6;
+
+  /* Sombras */
+  --sombra-suave: 0 10px 30px rgba(0, 0, 0, 0.25);
+  --sombra-lila: 0 8px 25px rgba(167, 139, 250, 0.18);
+  --sombra-rosa: 0 8px 25px rgba(244, 114, 182, 0.18);
+
+  /* Degradados */
+  --gradiente-principal: linear-gradient(
+    135deg,
+    #a78bfa,
+    #e879f9
+  );
+
+  --gradiente-rosa: linear-gradient(
+    135deg,
+    #f472b6,
+    #e879f9
+  );
+
+  --gradiente-fondo: radial-gradient(
+    circle at top right,
+    rgba(167, 139, 250, 0.12),
+    transparent 35%
+  );
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(
+      circle at 15% 10%,
+      rgba(232, 121, 249, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(167, 139, 250, 0.10),
+      transparent 30%
+    ),
+    var(--color-fondo);
+
+  color: var(--color-texto);
+  min-height: 100vh;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }

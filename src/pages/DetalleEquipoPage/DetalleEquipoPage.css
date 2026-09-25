@@ -1,8 +1,7 @@
-
 .detalle-equipo-page {
   width: 100%;
   padding: 28px;
-  color: #f8fafc;
+  color: var(--color-texto);
 }
 
 /* ---------- Tarjeta ---------- */
@@ -12,10 +11,12 @@
   max-width: 680px;
   margin: 0 auto;
   padding: 30px;
-  background: #1e293b;
-  border: 1px solid #334155;
+
+  background: var(--color-panel);
+  border: 1px solid var(--color-borde);
   border-radius: 16px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+
+  box-shadow: var(--sombra-suave);
 }
 
 /* ---------- Encabezado ---------- */
@@ -26,19 +27,20 @@
 
 .detalle-equipo-header h2 {
   margin: 0 0 8px;
-  color: #38bdf8;
+
+  color: var(--color-lila-claro);
   font-size: 24px;
   font-weight: 700;
 }
 
 .detalle-equipo-header p {
   margin: 0;
-  color: #94a3b8;
+  color: var(--color-texto-secundario);
   font-size: 13px;
 }
 
 .placa-detalle {
-  color: #f8fafc;
+  color: var(--color-texto);
   font-weight: 700;
 }
 
@@ -47,10 +49,13 @@
 .detalle-equipo-error {
   margin-bottom: 20px;
   padding: 13px 15px;
-  border: 1px solid #f43f5e;
+
+  border: 1px solid rgba(244, 114, 182, 0.4);
   border-radius: 10px;
-  background: rgba(127, 29, 29, 0.45);
-  color: #fecdd3;
+
+  background: rgba(244, 114, 182, 0.10);
+  color: #fda4c8;
+
   font-size: 13px;
 }
 
@@ -69,7 +74,7 @@
 }
 
 .detalle-form-group label {
-  color: #cbd5e1;
+  color: var(--color-lila-claro);
   font-size: 12px;
   font-weight: 700;
 }
@@ -77,20 +82,32 @@
 .detalle-form-group input,
 .detalle-form-group select {
   width: 100%;
+  box-sizing: border-box;
+
   padding: 11px 13px;
-  border: 1px solid #475569;
+
+  border: 1px solid var(--color-borde);
   border-radius: 9px;
+
   outline: none;
-  background: #0f172a;
-  color: #f8fafc;
+
+  background: var(--color-fondo);
+  color: var(--color-texto);
+
   font-size: 13px;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .detalle-form-group input:focus,
 .detalle-form-group select:focus {
-  border-color: #38bdf8;
-  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1);
+  border-color: var(--color-lila);
+
+  box-shadow:
+    0 0 0 3px rgba(167, 139, 250, 0.12),
+    0 0 15px rgba(167, 139, 250, 0.08);
 }
 
 /* ---------- Información bloqueada ---------- */
@@ -100,19 +117,22 @@
   align-items: center;
   justify-content: space-between;
   gap: 15px;
+
   padding: 13px 15px;
-  border: 1px solid #334155;
+
+  border: 1px solid var(--color-borde);
   border-radius: 10px;
-  background: #0f172a;
+
+  background: var(--color-fondo);
 }
 
 .info-equipo span:first-child {
-  color: #94a3b8;
+  color: var(--color-texto-secundario);
   font-size: 11px;
 }
 
 .info-equipo span:last-child {
-  color: #f8fafc;
+  color: var(--color-texto);
   font-size: 13px;
   font-weight: 700;
 }
@@ -123,49 +143,61 @@
   display: flex;
   justify-content: flex-end;
   gap: 12px;
+
   margin-top: 8px;
   padding-top: 20px;
-  border-top: 1px solid #334155;
+
+  border-top: 1px solid var(--color-borde);
 }
 
 .btn-volver,
 .btn-actualizar {
   padding: 10px 17px;
+
   border: none;
   border-radius: 9px;
+
   font-size: 12px;
   font-weight: 700;
+
   cursor: pointer;
   text-decoration: none;
+
   transition: all 0.2s ease;
 }
 
 .btn-volver {
-  background: #334155;
-  color: #cbd5e1;
+  background: #2a2039;
+  color: var(--color-texto-secundario);
 }
 
 .btn-volver:hover {
-  background: #475569;
+  background: var(--color-borde);
+  color: var(--color-texto);
 }
 
 .btn-actualizar {
-  background: #0284c7;
-  color: white;
+  background: var(--gradiente-principal);
+  color: #160d1d;
+
+  box-shadow: var(--sombra-lila);
 }
 
 .btn-actualizar:hover {
-  background: #0369a1;
+  background: var(--gradiente-rosa);
   transform: translateY(-1px);
-  box-shadow: 0 8px 18px rgba(2, 132, 199, 0.2);
+
+  box-shadow: var(--sombra-rosa);
 }
 
 /* ---------- Cargando ---------- */
 
 .detalle-loading {
   padding: 50px 20px;
+
   text-align: center;
-  color: #94a3b8;
+
+  color: var(--color-texto-secundario);
   font-size: 13px;
 }
 
@@ -190,4 +222,3 @@
     text-align: center;
   }
 }
-

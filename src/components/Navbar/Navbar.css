@@ -1,12 +1,12 @@
-
 .nav-menu {
   width: 100%;
   display: flex;
   align-items: center;
   gap: 8px;
   padding: 12px 28px;
-  background: #0f172a;
-  border-bottom: 1px solid #334155;
+  background: #1a1326;
+  border-bottom: 1px solid #392c50;
+  box-sizing: border-box;
 }
 
 /* ---------- Enlaces ---------- */
@@ -16,28 +16,37 @@
   align-items: center;
   gap: 7px;
   padding: 9px 15px;
+
   border: 1px solid transparent;
   border-radius: 9px;
-  color: #94a3b8;
+
+  color: #aaa0bd;
   background: transparent;
+
   font-size: 13px;
   font-weight: 600;
   text-decoration: none;
+
   transition: all 0.2s ease;
 }
 
 .nav-pill:hover {
-  color: #f8fafc;
-  background: #1e293b;
-  border-color: #334155;
+  color: #f8f7ff;
+  background: rgba(167, 139, 250, 0.10);
+  border-color: #392c50;
 }
 
 /* ---------- Enlace activo ---------- */
 
 .nav-pill.active {
-  color: #7f1df0;
-  background: rgba(57, 217, 138, 0.1);
-  border-color: rgba(57, 217, 138, 0.25);
+  color: #c4b5fd;
+  background: linear-gradient(
+    135deg,
+    rgba(167, 139, 250, 0.16),
+    rgba(232, 121, 249, 0.12)
+  );
+  border-color: rgba(167, 139, 250, 0.35);
+  box-shadow: 0 4px 15px rgba(167, 139, 250, 0.10);
 }
 
 /* ---------- Responsive ---------- */

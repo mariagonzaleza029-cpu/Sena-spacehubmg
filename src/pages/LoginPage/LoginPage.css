@@ -1,26 +1,42 @@
-
 .login-page {
   min-height: 100vh;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   padding: 32px 20px;
   box-sizing: border-box;
+
   background:
-    radial-gradient(circle at top right, rgba(57, 217, 138, 0.08), transparent 30%),
-    radial-gradient(circle at bottom left, rgba(56, 189, 248, 0.07), transparent 30%),
-    #030817;
+    radial-gradient(
+      circle at top right,
+      rgba(232, 121, 249, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(167, 139, 250, 0.12),
+      transparent 30%
+    ),
+    #120d1c;
 }
 
 .login-card {
   width: 100%;
   max-width: 440px;
+
   padding: 36px;
   box-sizing: border-box;
-  background: #1e293b;
-  border: 1px solid #334155;
+
+  background: var(--color-panel);
+
+  border: 1px solid var(--color-borde);
   border-radius: 16px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.35),
+    0 0 40px rgba(167, 139, 250, 0.06);
 }
 
 /* MARCA */
@@ -29,34 +45,45 @@
   display: flex;
   align-items: center;
   gap: 14px;
+
   margin-bottom: 34px;
 }
 
 .login-logo {
   width: 52px;
   height: 52px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   flex-shrink: 0;
+
   border-radius: 14px;
-  background: #39d98a;
-  color: #07140d;
+
+  background: var(--gradiente-principal);
+  color: #160d1d;
+
   font-size: 24px;
   font-weight: 800;
-  box-shadow: 0 8px 20px rgba(57, 217, 138, 0.15);
+
+  box-shadow: var(--sombra-lila);
 }
 
 .login-brand h1 {
   margin: 0;
-  color: #f8fafc;
+
+  color: var(--color-texto);
+
   font-size: 20px;
   font-weight: 800;
 }
 
 .login-brand p {
   margin: 4px 0 0;
-  color: #94a3b8;
+
+  color: var(--color-texto-secundario);
+
   font-size: 12px;
 }
 
@@ -68,14 +95,18 @@
 
 .login-heading h2 {
   margin: 0 0 7px;
-  color: #f8fafc;
+
+  color: var(--color-texto);
+
   font-size: 27px;
   font-weight: 800;
 }
 
 .login-heading p {
   margin: 0;
-  color: #94a3b8;
+
+  color: var(--color-texto-secundario);
+
   font-size: 13px;
   line-height: 1.5;
 }
@@ -95,7 +126,8 @@
 }
 
 .form-group label {
-  color: #cbd5e1;
+  color: var(--color-lila-claro);
+
   font-size: 12px;
   font-weight: 700;
 }
@@ -103,23 +135,34 @@
 .form-group input {
   width: 100%;
   box-sizing: border-box;
+
   padding: 12px 13px;
-  border: 1px solid #475569;
+
+  border: 1px solid var(--color-borde);
   border-radius: 9px;
+
   outline: none;
-  background: #0f172a;
-  color: #f8fafc;
+
+  background: var(--color-fondo);
+  color: var(--color-texto);
+
   font-size: 13px;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .form-group input::placeholder {
-  color: #64748b;
+  color: #6f6680;
 }
 
 .form-group input:focus {
-  border-color: #39d98a;
-  box-shadow: 0 0 0 3px rgba(57, 217, 138, 0.1);
+  border-color: var(--color-lila);
+
+  box-shadow:
+    0 0 0 3px rgba(167, 139, 250, 0.12),
+    0 0 18px rgba(167, 139, 250, 0.08);
 }
 
 .form-group input:disabled {
@@ -132,10 +175,13 @@
 .login-error {
   margin-bottom: 18px;
   padding: 11px 13px;
-  border: 1px solid #f43f5e;
+
+  border: 1px solid rgba(244, 114, 182, 0.4);
   border-radius: 9px;
-  background: rgba(127, 29, 29, 0.45);
-  color: #fecdd3;
+
+  background: rgba(244, 114, 182, 0.10);
+  color: #fda4c8;
+
   font-size: 12px;
   line-height: 1.4;
 }
@@ -144,22 +190,33 @@
 
 .login-button {
   width: 100%;
+
   padding: 12px 16px;
-  border: 1px solid #39d98a;
+
+  border: 1px solid var(--color-lila);
   border-radius: 9px;
-  background: #39d98a;
-  color: #07140d;
+
+  background: var(--gradiente-principal);
+  color: #160d1d;
+
   font-size: 13px;
   font-weight: 800;
+
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.2s ease,
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
     box-shadow 0.2s ease;
 }
 
 .login-button:hover:not(:disabled) {
-  background: #2fc477;
+  background: var(--gradiente-rosa);
+
   transform: translateY(-1px);
-  box-shadow: 0 8px 20px rgba(57, 217, 138, 0.18);
+
+  box-shadow:
+    0 8px 22px rgba(244, 114, 182, 0.22);
 }
 
 .login-button:disabled {
@@ -173,9 +230,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   gap: 7px;
+
   margin-top: 25px;
-  color: #64748b;
+
+  color: #6f6680;
   font-size: 11px;
 }
 
